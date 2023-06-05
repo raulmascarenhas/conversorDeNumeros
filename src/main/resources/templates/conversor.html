@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Conversor de Números</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            text-align: left;
+        }
+
+        h1 {
+            color: #333333;
+            margin-top: 40px;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"] {
+            padding: 8px;
+            font-size: 16px;
+            border: 1px solid #cccccc;
+            border-radius: 4px;
+            width: 300px;
+            outline: none;
+        }
+
+        button[type="submit"] {
+            padding: 8px 16px;
+            font-size: 16px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        h2 {
+            color: #333333;
+            margin-top: 20px;
+        }
+
+        .right-align {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Conversor de Números</h1>
+    <p>Converta números romanos em arábicos e vice-versa</p>
+    <form action="/converter" method="post">
+        <label for="numero">Número:</label>
+        <input type="text" name="numero" id="numero">
+        <button type="submit">Converter</button>
+    </form>
+    <h2>Resultado: <span th:text="${resultado}"></span></h2>
+    <img src="https://i0.wp.com/emotioncard.com.br/wp-content/uploads/2017/08/numeros-romanos.jpeg?fit=590%2C400&ssl=1" class="right-align">
+</body>
+</html>
